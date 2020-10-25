@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "testakscluster-8f47"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "testakscluster-8f47"
+  template:
+    metadata:
+      labels:
+        app: "testakscluster-8f47"
+    spec:
+      containers:
+        - name: "testakscluster-8f47"
+          image: "test132.azurecr.io/testakscluster"
+          ports:
+          - containerPort: 8080
